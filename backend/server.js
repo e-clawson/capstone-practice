@@ -2,8 +2,10 @@
 import express from "express";
 //import cors
 import cors from 'cors';
-
+//allows us to make  our own env variables 
 import "dotenv/config";
+//import the function to connect to the DB 
+import connectDB from "./config.js";
 
 //creat our express application 
 const app = express()
@@ -23,4 +25,5 @@ app.get('/test', (req, res) => {
 //add the port 
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`)
+    connectDB()
 })
