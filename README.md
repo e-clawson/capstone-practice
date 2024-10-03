@@ -109,3 +109,6 @@ now we have the READ from CRUD in our app, nead to work on create, update, and d
 backend 
 - in server.js, setup post request, and test post request route in reqbin/postman etc
 - add middleware to handle requests app.use(express.json())
+
+front end 
+- go to app.jsx and map the todos to render the list 

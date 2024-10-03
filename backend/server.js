@@ -16,7 +16,8 @@ const app = express()
 //but for now we leave empty 
 app.use(cors())
 
-//config middleware - data from client stored in request.body and formatted as json - important middleware for post and put requests  
+//config middleware - data from client stored in request.body 
+//and formatted as json - important middleware for post and put requests  
 app.use(express.json())
 
 //specify a port
