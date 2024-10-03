@@ -55,6 +55,21 @@ app.post('/todos', async (req,res) =>{
      }
 })
 
+// route for deleting a documentfrom the database 
+app.delete("/todos/:id", async (req,res) => {
+    try {
+        //use id from params to find and delete the document 
+        const deletedToDo = await Todo.findByIdAndDelete(req.params.id)
+        console.log(deletedToDo)
+        console.log("DELETE /todos/:id")
+        res.status(200).json(deletedToDo)
+    } catch(e) {
+        console.log(e)
+        res.status(400).json(e)
+    }
+}) //id helps us find the specific document to delete 
+
+
 //add the port 
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`)

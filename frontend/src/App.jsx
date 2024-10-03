@@ -19,7 +19,6 @@ function App() {
 
   function handleChange(e){ 
     setInput(e.target.value)
-
   }
 
   async function handleSubmit(e){
@@ -37,8 +36,19 @@ function App() {
         'Content-Type': 'application/json'
       }
     })
-    const data = await response.json()
-    console.log(data)
+    const newToDo = await response.json()
+    setToDos([...todos, newToDo])
+    console.log(newToDo)
+    setInput("")
+  }
+// make the request with document id in path (at end)
+  async function handleDelete(id) {
+    const response = await fetch(`http://localhost:8080/todos/${id}`, {
+      method: "DELETE", 
+    })
+    //make a copy od the sate but also remove the document with the matching id
+    const newToDos = todos.filter(todo => todo._id !== id )
+    setToDos(newToDos)
   }
 
 
@@ -50,6 +60,7 @@ function App() {
         {todos.map(todo =>
         <li key={todo._id}>
           {todo.text}
+          <button onClick={() => handleDelete(todo._id)}>X</button>
         </li>
       )}
       </ul>
