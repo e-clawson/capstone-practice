@@ -66,11 +66,28 @@ backend -
 - in config file - import mongoose from mongoose 
 - make async function to connect to the db (async gives you more control over when it happens )
 - for this connection you need your mongodb driver URL - log in to mongodb(online) - go to connect go to drivers and grab the link 
-VERY IMORTANT - make sure this is securte - put in a .env file to do this 
+VERY IMORTANT - make sure this is secure - put in a .env file to do this 
 - run 'npm install dotenv'
 - got to server.js and import 'dotenv/config'
 - make a .env file 
 - add that .env into .gitignore
 - add Mongo_URL = and paste your connection link here 
 - add your password and add database name after mongodb.net after the / and before the ? 
-- 
+- add process.env.MONGO_URL into the connection function 
+- go to server.js - import connection function (line 8)
+- call the connection function - we did in port (second to last line)  
+
+--
+
+we've made a connection to the db so we can save data to our db 
+we need to determine what those documents look like - what kind of data are we saving - what fields and values will they have 
+
+mongoose will help us with this through the use of models and schemas 
+
+--
+
+backend 
+- create a models folder in backend 
+- inside models folder create a todoModel.js
+- in that file, import mongoose from mongoose 
+- create the schema 
