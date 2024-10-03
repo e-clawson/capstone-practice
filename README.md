@@ -22,3 +22,11 @@ setup github repo
 - click the + to make a new repo (give it the same name for consistency)
 - go through the steps on the screen 
 - refresh the page and check that it committed and everything is there 
+
+now we have the project setup 
+
+# backend 
+- go to server.js file in backend and make an express server 
+- (go to package.json change the type to mpodule - ES6 modules )
+- cd to backend folder and run 'npm install express'
+- 
