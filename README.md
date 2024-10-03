@@ -45,3 +45,6 @@ now we have the project setup
 - import useEffect - to help us get data when the page loads 
 - add to app function - takes two things 
 - make a fetch request in the useEffect function - do an async function for the fetch 
+- open a new terminal for the frontend -  cd to the frontend 
+- run 'npm run dev' in frontend 
+- check that the frontend loaded (check error messages to see if it fetched properly )
