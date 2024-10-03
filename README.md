@@ -30,4 +30,10 @@ now we have the project setup
 - (go to package.json change the type to mpodule - ES6 modules )
 - cd to backend folder and run 'npm install express'
 - (pro-tip don't push the mode modules folder)
-- create git ignore 
+- create git ignore for backend
+- 
+
+- import express from express 
+- create our express app 
+- make any route to test 
+- listen for a specific port 
