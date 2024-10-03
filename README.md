@@ -112,3 +112,6 @@ backend
 
 front end 
 - go to app.jsx and map the todos to render the list 
+- now start creating a form to add them from the frontend ui 
+- create a state for the input, and a handle change function to help manage the state and the change 
+
