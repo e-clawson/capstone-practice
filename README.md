@@ -25,7 +25,7 @@ setup github repo
 
 now we have the project setup 
 
-# backend 
+backend 
 - go to server.js file in backend and make an express server 
 - (go to package.json change the type to mpodule - ES6 modules )
 - cd to backend folder and run 'npm install express'
@@ -40,7 +40,7 @@ now we have the project setup
 - to run the port run the code 'nodemon' in terminal 
 - check that the port and route are working 
 
-# frontend 
+frontend 
 - update app.jsx
 - import useEffect - to help us get data when the page loads 
 - add to app function - takes two things 
@@ -50,7 +50,12 @@ now we have the project setup
 - check that the frontend loaded (check error messages to see if it fetched properly )
 (cors error - security behavior is to block something coming from a different place - server might need to allow access from a different source or origin - this happens often - how to fix - could add an IIFEE function - other option - need to go to backend and enable this)
 
-# backend 
+backend 
 - go to backend - stop the server - there is a library to install to help with this - install cors 
 - run 'npm i cors' (make sure ypur terminal is in the backend)
-- 
+- import cors to server.js (line 4)
+- establish cors as middleware (line 11)
+
+- run the frontend in the browser - inspect the browser and check to see that the backend console.log is appearing 
+
+If it is - then you have a setup frontend and backend and they are successfully communicating 

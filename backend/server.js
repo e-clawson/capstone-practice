@@ -1,5 +1,7 @@
 //import express
 import express from "express";
+//import cors
+import cors from 'cors';
 
 //creat our express application 
 const app = express()
