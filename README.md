@@ -8,7 +8,7 @@ Setup environment
  - cd into whatever folder you would like to save project on locally 
  - crate project file 'mkdir my-project-name'
  - cd into new project file 
- - create frontend - 'create vite@latest' - add frontend name, choose react, choose javascript 
+ - create frontend - 'npm create vite@latest' - add frontend name, choose react, choose javascript 
  - cd into frontend project 
  - run 'npm install' 
  - cd into main project folder 
@@ -59,3 +59,18 @@ backend
 - run the frontend in the browser - inspect the browser and check to see that the backend console.log is appearing 
 
 If it is - then you have a setup frontend and backend and they are successfully communicating 
+
+backend - 
+- make config.js file 
+- going to use mongoose to help us communicate - install mongoose by using the following command in the terminal (make sure terminal is cd into backend) = 'npm i mongoose'
+- in config file - import mongoose from mongoose 
+- make async function to connect to the db (async gives you more control over when it happens )
+- for this connection you need your mongodb driver URL - log in to mongodb(online) - go to connect go to drivers and grab the link 
+VERY IMORTANT - make sure this is securte - put in a .env file to do this 
+- run 'npm install dotenv'
+- got to server.js and import 'dotenv/config'
+- make a .env file 
+- add that .env into .gitignore
+- add Mongo_URL = and paste your connection link here 
+- add your password and add database name after mongodb.net after the / and before the ? 
+- 
