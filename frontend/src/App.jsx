@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import './App.css'
 
-export const BASE_URL = "http://localhost:8080"
+export const BASE_URL = import.meta.env.VITE_BASE_URL
 
 function App() {
   const [todos, setToDos] = useState([])
