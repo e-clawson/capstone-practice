@@ -6,6 +6,8 @@ import cors from 'cors';
 import "dotenv/config";
 //import the function to connect to the DB 
 import connectDB from "./config.js";
+//import todo model 
+import Todo from "./models/todoModel.js";
 
 //creat our express application 
 const app = express()
@@ -20,6 +22,18 @@ const PORT = 8080
 //make any route to test 
 app.get('/test', (req, res) => {
     res.json("hello")
+})
+
+app.get('/todos', async (req,res) => {
+    try{
+        //use the fin method to retrieve all todos from the todos collection
+       const todos = await Todo.find({})
+       //send those documents to the frontend client 
+       res.status(200).json(todos)
+    } catch(e) {
+        console.log(e)
+        res.status(400).json(e)
+    }
 })
 
 //add the port 

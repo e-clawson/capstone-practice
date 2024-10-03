@@ -91,3 +91,8 @@ backend
 - inside models folder create a todoModel.js
 - in that file, import mongoose from mongoose 
 - create the schema 
+
+in serve.js
+- import to server.js 
+- make a new route that get all todos 
+- test the route using reqbin, etc. 
