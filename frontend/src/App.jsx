@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import './App.css'
 
+export const BASE_URL = "http://localhost:8080"
+
 function App() {
   const [todos, setToDos] = useState([])
   //better to be an empty array than null cuz you cant do map on a null
@@ -9,7 +11,7 @@ function App() {
 
   useEffect(() => {
     async function test() {
-      const response = await fetch('http://localhost:8080/todos')
+      const response = await fetch(`${BASE_URL}/todos`)
       const data = await response.json()
       console.log(data)
       setToDos(data)
@@ -29,7 +31,7 @@ function App() {
       text: input
     }
     //make the request  - fetch 
-    const response = await fetch('http://localhost:8080/todos', {
+    const response = await fetch(`${BASE_URL}/todos`, {
       method: 'POST', 
       body: JSON.stringify(todo),
       headers: {
@@ -43,7 +45,7 @@ function App() {
   }
 // make the request with document id in path (at end)
   async function handleDelete(id) {
-    const response = await fetch(`http://localhost:8080/todos/${id}`, {
+    const response = await fetch(`${BASE_URL}/todos/${id}`, {
       method: "DELETE", 
     })
     //make a copy od the sate but also remove the document with the matching id
