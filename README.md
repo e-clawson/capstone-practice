@@ -37,3 +37,11 @@ now we have the project setup
 - create our express app 
 - make any route to test 
 - listen for a specific port 
+- to run the port run the code 'nodemon' in terminal 
+- check that the port and route are working 
+
+# frontend 
+- update app.jsx
+- import useEffect - to help us get data when the page loads 
+- add to app function - takes two things 
+- make a fetch request in the useEffect function - do an async function for the fetch 
