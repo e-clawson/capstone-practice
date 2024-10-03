@@ -48,3 +48,9 @@ now we have the project setup
 - open a new terminal for the frontend -  cd to the frontend 
 - run 'npm run dev' in frontend 
 - check that the frontend loaded (check error messages to see if it fetched properly )
+(cors error - security behavior is to block something coming from a different place - server might need to allow access from a different source or origin - this happens often - how to fix - could add an IIFEE function - other option - need to go to backend and enable this)
+
+# backend 
+- go to backend - stop the server - there is a library to install to help with this - install cors 
+- run 'npm i cors' (make sure ypur terminal is in the backend)
+- 
