@@ -96,3 +96,8 @@ in serve.js
 - import to server.js 
 - make a new route that get all todos 
 - test the route using reqbin, etc. 
+
+now go back to frontend 
+- change fetch request to new path 
+- check to see that our empty array comes back 
+- bring in a state variable to store the todos array 

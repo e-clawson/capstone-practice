@@ -3,13 +3,14 @@ import { useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [todos, setToDos] = useState([])
 
   useEffect(() => {
     async function test() {
-      const response = await fetch('http://localhost:8080/test')
+      const response = await fetch('http://localhost:8080/todos')
       const data = await response.json()
       console.log(data)
+      setToDos(data)
     }
     test()
   }, [])

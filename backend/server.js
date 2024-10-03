@@ -28,6 +28,7 @@ app.get('/todos', async (req,res) => {
     try{
         //use the fin method to retrieve all todos from the todos collection
        const todos = await Todo.find({})
+       console.log('GET /todos') //good to add shows us it made a GET request to this path
        //send those documents to the frontend client 
        res.status(200).json(todos)
     } catch(e) {
