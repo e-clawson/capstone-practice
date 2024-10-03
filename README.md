@@ -101,3 +101,11 @@ now go back to frontend
 - change fetch request to new path 
 - check to see that our empty array comes back 
 - bring in a state variable to store the todos array 
+
+now we have the READ from CRUD in our app, nead to work on create, update, and delete 
+
+(can do either from the frontend first or the backend first, we will fo backend first, testing routes and ensuring they work and then go to frontend)
+
+backend 
+- in server.js, setup post request, and test post request route in reqbin/postman etc
+- add middleware to handle requests app.use(express.json())
