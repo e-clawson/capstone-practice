@@ -29,4 +29,5 @@ now we have the project setup
 - go to server.js file in backend and make an express server 
 - (go to package.json change the type to mpodule - ES6 modules )
 - cd to backend folder and run 'npm install express'
-- 
+- (pro-tip don't push the mode modules folder)
+- create git ignore 
