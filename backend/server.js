@@ -69,6 +69,17 @@ app.delete("/todos/:id", async (req,res) => {
     }
 }) //id helps us find the specific document to delete 
 
+app.put("/todos/:id", async (req,res) => {
+    try{
+        const editedToDo = await Todo.findByIdAndUpdate(req.params.id, req.body)
+        console.log(editedToDo)
+        console.log("PUT /todos/:id")
+        res.status(200).json(editedToDo)
+    } catch(e) {
+        console.log(e)
+        res.status(400).json(e)
+    }
+})
 
 //add the port 
 app.listen(PORT, () => {
