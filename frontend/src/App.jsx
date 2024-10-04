@@ -58,7 +58,7 @@ function App() {
       const newTodos = todos.filter(todo => todo._id !== id)
 
       // update the state with a new array
-      setTodos(newTodos)
+      setToDos(newTodos)
     } catch(e) {
       console.log('in the catch')
       console.log(e)
@@ -86,13 +86,13 @@ function App() {
     const updatedTodos = todos.map((todo) => (todo._id === updatedTodo._id ? updatedTodo : todo));
 
     // update the state with a new array
-    setTodos(updatedTodos);
+    setToDos(updatedTodos);
   }
 
   return (
     
     <>
-      <h1>HELLO</h1>
+      <h1>To Dos</h1>
       <ul>
         {todos.map(todo =>
         <li key={todo._id}>
@@ -104,7 +104,7 @@ function App() {
       </ul>
       <form onSubmit={handleSubmit}>
         <input value={input} onChange={handleChange}/>
-        <button>Submit</button>
+        <button>Add</button>
       </form>
 
     </>

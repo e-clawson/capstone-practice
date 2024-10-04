@@ -150,3 +150,16 @@ then hit deploy
 - then click deploy 
 
 once it is deployed you will have a link to see the live site! 
+
+to keep in mind - mongodb api adresses that are whitelisted - sometimes they are set to allow access from anywhere - if you specify and ip address it needs to be shared with the deployment 
+
+any time you make changes - by default it is configured to that if you push a commit r update it will re-deploy with the updated code - might need to do the configure step though 
+
+redirect/rewrite rules - add - this is the one that renders your project the source file 
+- destination is /index.html 
+- source /* (wildcard)
+- action can change to rewrite 
+for more infor about this check out this page (https://docs.render.com/deploy-create-react-app#using-client-side-routing)
+- this is for client-side routing 
+
+with netlify you do something similar 
