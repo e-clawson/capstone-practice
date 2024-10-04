@@ -141,7 +141,7 @@ then hit deploy
 # Deployment - frontend
 
 (before we deploy we might need to make some changes - the base URL is now different) 
-- could deploy our frontend somewher else but because we're already in render, we wil use that too 
+- could deploy our frontend somewhere else but because we're already in render, we wil use that too 
 - click on new - and choose static site 
 - add a link to your repo -  add frontend to name so you know this is for the front end 
 - in frontend make build command - 'npm install; npm run build'
