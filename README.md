@@ -118,3 +118,23 @@ front end
 work on a delete route 
 - go to backend 
 
+work on edit route (PUT) 
+
+# Deployment 
+
+we will be using something called render - will help us deploy backend and a bit of front end - back end as a service we can use render for both 
+
+(netlify allows you to deploy the front end but not the back end) 
+ - create a free plan 
+ - click on new web service 
+ (will use your github repo to deploy)
+ - click public git repo - put link to your project there 
+ - configure page - (maybe make backend in title so you know what it is for )
+    - root directory - important for us - (one repo with two subfolders - one for backend and noe for frontend - if were deploying this webservice that will be oir backend - need to direct them to the backend - put whatever the subfolder is called - in this case it in backend)
+    - build command is 'npm install' - just like we do to start our backend - this will find the package.json in the backend and find and install the dependencies 
+    - the start command should be 'node server' (in development it is nodemon - nodemon restarts the server)
+- set the environment variables (using github to build the project but github doesnt have the env variables)
+
+then hit deploy
+(cuz we're using a free tier it will "spin down between requests - it will take some time to render/be slower  - but its free so it is what it is)
+
