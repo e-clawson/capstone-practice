@@ -71,7 +71,7 @@ app.delete("/todos/:id", async (req,res) => {
 
 app.put("/todos/:id", async (req,res) => {
     try{
-        const editedToDo = await Todo.findByIdAndUpdate(req.params.id, req.body)
+        const editedToDo = await Todo.findByIdAndUpdate(req.params.id, req.body, {new: true })
         console.log(editedToDo)
         console.log("PUT /todos/:id")
         res.status(200).json(editedToDo)
@@ -86,3 +86,6 @@ app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`)
     connectDB()
 })
+
+// should add some basic error handling - try/catch are important when 
+//fetching from the database 
