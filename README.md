@@ -143,7 +143,7 @@ then hit deploy
 (before we deploy we might need to make some changes - the base URL is now different) 
 - could deploy our frontend somewhere else but because we're already in render, we wil use that too 
 - click on new - and choose static site 
-- add a link to your repo -  add frontend to name so you know this is for the front end 
+- add a link to your repo -  add frontend to name so you know this is for the front end (make frontend the root)
 - in frontend make build command - 'npm install; npm run build'
 - publish directory - called dist (vite specific)
 - add env variables - base url for backend - the production api that we just created's link 
