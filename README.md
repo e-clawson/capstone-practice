@@ -120,7 +120,7 @@ work on a delete route
 
 work on edit route (PUT) 
 
-# Deployment 
+# Deployment - backend
 
 we will be using something called render - will help us deploy backend and a bit of front end - back end as a service we can use render for both 
 
@@ -138,3 +138,15 @@ we will be using something called render - will help us deploy backend and a bit
 then hit deploy
 (cuz we're using a free tier it will "spin down between requests - it will take some time to render/be slower  - but its free so it is what it is)
 
+# Deployment - frontend
+
+(before we deploy we might need to make some changes - the base URL is now different) 
+- could deploy our frontend somewher else but because we're already in render, we wil use that too 
+- click on new - and choose static site 
+- add a link to your repo -  add frontend to name so you know this is for the front end 
+- in frontend make build command - 'npm install; npm run build'
+- publish directory - called dist (vite specific)
+- add env variables - base url for backend - the production api that we just created's link 
+- then click deploy 
+
+once it is deployed you will have a link to see the live site! 
